@@ -1,9 +1,19 @@
 // -*- mode: c++; c-basic-offset: 2; indent-tabs-mode: nil; -*-
-// Example of a clock. This is very similar to the text-example,
-// except that it shows the time :)
+// Copyright (C) 2017 Ben Ptacek <ben.ptacek@gmail.com>
 //
-// This code is public domain
-// (but note, that the led-matrix library this depends on is GPL v2)
+// This program is free software; you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation version 2.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://gnu.org/licenses/gpl-2.0.txt>
+//
+// LED Smart Clock
 
 #include "led-matrix.h"
 #include "graphics.h"
