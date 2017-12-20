@@ -4,7 +4,7 @@ Description=SmartClock
 [Service]
 Type=forking
 User=root
-ExecStart=/home/pi/piclock/smartledclock/smartclock_daemon.sh
+ExecStart=/home/pi/smartclock/smartclock_daemon.sh
 
 [Install]
 WantedBy=multi-user.target
