@@ -10,8 +10,6 @@ Smart LED clock
 Login to your Raspberry Pi and stay in the home directory.
 
 ``` shell
-mkdir smartclock
-cd smartclock
 git clone https://github.com/bennysp/smartledclock.git
 sudo cp systemd/smartclock.service /lib/systemd/system/
 sudo systemctl daemon-reload
