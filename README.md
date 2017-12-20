@@ -5,6 +5,19 @@ Smart LED clock
 ![Updated Clock Pic](img/clock_basic.jpg)
 \* This picture will be updated through the progression of the project.  ( [See Goals Section](#goals-and-status) )
 
+## How to install
+
+Login to your Raspberry Pi and stay in the home directory.
+
+``` shell
+mkdir smartclock
+cd smartclock
+git clone https://github.com/bennysp/smartledclock.git
+sudo cp systemd/smartclock.service /lib/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl start smartclock.service
+```
+
 ## Hardware used
 
 - Raspberry Pi 2 B - [Amazon Link](https://www.amazon.com/Raspberry-Pi-Model-Desktop-Linux/dp/B00T2U7R7I)
