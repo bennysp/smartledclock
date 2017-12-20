@@ -16,6 +16,19 @@ chmod 755 install_smartledclock.sh
 ./install_smartledclock.sh
 ```
 
+If everything worked, then you should see a clock displayed on your LED panel!
+
+## Starting and Stopping
+
+Setup installs to **systemd**.  It will startup/shutdown via the OS reboots.  If you want to startup and shutdown outside of the OS, you can use the standard commands.
+
+``` shell
+sudo systemctl start smartledclock.service
+sudo systemctl stop smartledclock.service
+sudo systemctl status smartledclock.service
+sudo systemctl restart smartledclock.service
+```
+
 ## Hardware used
 
 - Raspberry Pi 2 B - [Amazon Link](https://www.amazon.com/Raspberry-Pi-Model-Desktop-Linux/dp/B00T2U7R7I)

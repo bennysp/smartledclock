@@ -1,8 +1,8 @@
 #!/bin/bash
 
-sudo cp systemd/smartclock.service /lib/systemd/system/
+sudo cp systemd/smartledclock.service /lib/systemd/system/
 sudo systemctl daemon-reload
-sudo systemctl enable smartclock.service
-sudo systemctl start smartclock.service
+sudo systemctl enable smartledclock.service
+sudo systemctl start smartledclock.service
 
 exit 0
