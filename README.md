@@ -15,6 +15,7 @@ cd smartclock
 git clone https://github.com/bennysp/smartledclock.git
 sudo cp systemd/smartclock.service /lib/systemd/system/
 sudo systemctl daemon-reload
+sudo systemctl enable smartclock.service
 sudo systemctl start smartclock.service
 ```
 
