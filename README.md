@@ -7,6 +7,16 @@ Smart LED clock
 - 64x32 RGB LED Matrix - 3mm pitch  - [Adafruit Link](https://www.adafruit.com/product/2279)
 - 5v 10amp Power Supply - [Amazon Link](https://smile.amazon.com/gp/product/B01M0KLECZ/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1)
 
+## Goals and Status
+1. Display a simple clock on startup
+1. Create layouts for placement
+1. Create first app - weather?
+1. Incorporate connections to [IFTTT](https://ifttt.com/)
+1. Webserver for admin and management
+
+### Optional Goals
+1. Mobile app
+
 ## Thanks and contributions
 Original code started from the clock example in hzeller's repository.
 [https://github.com/hzeller/rpi-rgb-led-matrix](https://github.com/hzeller/rpi-rgb-led-matrix)
