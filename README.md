@@ -11,10 +11,8 @@ Login to your Raspberry Pi and stay in the home directory.
 
 ``` shell
 git clone https://github.com/bennysp/smartledclock.git
-sudo cp systemd/smartclock.service /lib/systemd/system/
-sudo systemctl daemon-reload
-sudo systemctl enable smartclock.service
-sudo systemctl start smartclock.service
+chmod 755 systemd/install_service.sh
+systemd/install_service.sh
 ```
 
 ## Hardware used
