@@ -11,6 +11,7 @@ Login to your Raspberry Pi and stay in the home directory.
 
 ``` shell
 git clone https://github.com/bennysp/smartledclock.git
+cd smartledclock
 chmod 755 systemd/install_service.sh
 systemd/install_service.sh
 ```
