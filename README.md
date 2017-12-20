@@ -3,6 +3,7 @@
 Smart LED clock
 
 ![Updated Clock Pic](img/clock_basic.jpg)
+\* This picture will be updated through the progression of the project.  ( [See Goals Section](#goals-and-status) )
 
 ## Hardware used
 
@@ -22,7 +23,7 @@ Smart LED clock
 
 ## Goals and Status
 
-1. Display a simple clock on startup
+1. ~~Display a simple clock on startup~~ **COMPLETE**
 1. Create layouts for placement
 1. Create first app - weather?
 1. Incorporate connections to [IFTTT](https://ifttt.com/)
