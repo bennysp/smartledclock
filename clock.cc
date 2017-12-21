@@ -90,7 +90,7 @@ int main(int argc, char *argv[]) {
   const char *btext = "";
 
   int opt;
-  while ((opt = getopt(argc, argv, "x:y:f:C:B:O:b:S:d:")) != -1) {
+  while ((opt = getopt(argc, argv, "x:y:f:C:B:O:b:S:d:t:L:")) != -1) {
     switch (opt) {
     case 'd': time_format = strdup(optarg); break;
     case 'b': brightness = atoi(optarg); break;

@@ -10,13 +10,13 @@ basedir=/home/pi/smartledclock
 
 # Set your bottom text
 
-bottomtext="Testing..."
+bottomtext="TESTING"
 
 # Set the brightness here
 
 #brightness=100
-brightness=50
-#brightness=25
+#brightness=50
+brightness=40  # Seems the most stable and not too bright
 
 
 # Set you color here
@@ -42,6 +42,6 @@ bottomcolor=255,0,0 #red
 # For raspberry pi 2/3, you need to set the slowndown for gpio; 
 # mapping the adafruit hat for gpio
 # Reduce the PWM bits - at the default of 11, when you reduce the brightness, it flickers, this prevents flickering
-sudo ${basedir}/clock --led-gpio-mapping=adafruit-hat --led-chain=2 --led-slowdown-gpio=2 -b ${brightness} -f ${basedir}/fonts/7x14B.bdf -x 5 -y 0.5 -C ${color} --led-brightness=${brightness} --led-pwm-bits=5 -d '%I:%M %p' -t ${bottomtext} -L ${bottomcolor} & 
+sudo ${basedir}/clock --led-gpio-mapping=adafruit-hat --led-chain=2 --led-slowdown-gpio=2 -b ${brightness} -f ${basedir}/fonts/7x14B.bdf -x 5 -y 0.5 -C ${color} --led-brightness=${brightness} --led-pwm-bits=8 -d '%I:%M %p' -t ${bottomtext} -L ${bottomcolor} & 
 
 exit 0
