@@ -45,8 +45,10 @@ static int usage(const char *progname) {
           "\t-b <brightness>   : Sets brightness percent. Default: 100.\n"
           "\t-x <x-origin>     : X-Origin of displaying text (Default: 0)\n"
           "\t-y <y-origin>     : Y-Origin of displaying text (Default: 0)\n"
+          "\t-t <r,g,b>        : Bottom Text\n"
           "\t-S <spacing>      : Spacing pixels between letters (Default: 0)\n"
           "\t-C <r,g,b>        : Color. Default 255,255,0\n"
+          "\t-L <r,g,b>        : Bottom Color - for bottom text. Default 255,0,0\n"
           "\t-B <r,g,b>        : Background-Color. Default 0,0,0\n"
           "\t-O <r,g,b>        : Outline-Color, e.g. to increase contrast.\n"
           );
@@ -76,6 +78,7 @@ int main(int argc, char *argv[]) {
   Color color(255, 255, 0);
   Color bg_color(0, 0, 0);
   Color outline_color(0,0,0);
+  Color bcolor(255, 0, 0);
   bool with_outline = false;
 
   const char *bdf_font_file = NULL;
@@ -83,6 +86,8 @@ int main(int argc, char *argv[]) {
   int y_orig = 0;
   int brightness = 100;
   int letter_spacing = 0;
+
+  const char *btext = "";
 
   int opt;
   while ((opt = getopt(argc, argv, "x:y:f:C:B:O:b:S:d:")) != -1) {
@@ -93,9 +98,16 @@ int main(int argc, char *argv[]) {
     case 'y': y_orig = atoi(optarg); break;
     case 'f': bdf_font_file = strdup(optarg); break;
     case 'S': letter_spacing = atoi(optarg); break;
+    case 't': btext = strdup(optarg); break;
     case 'C':
       if (!parseColor(&color, optarg)) {
         fprintf(stderr, "Invalid color spec: %s\n", optarg);
+        return usage(argv[0]);
+      }
+      break;
+    case 'L':
+      if (!parseColor(&bcolor, optarg)) {
+        fprintf(stderr, "Invalid second color spec: %s\n", optarg);
         return usage(argv[0]);
       }
       break;
@@ -181,6 +193,9 @@ int main(int argc, char *argv[]) {
       rgb_matrix::DrawText(offscreen, font, x, y + font.baseline(),
                            color, NULL, text_buffer,
                            letter_spacing);
+
+      rgb_matrix::DrawText(offscreen, font, x, 16 + font.baseline(),
+                           bcolor, NULL, btext, letter_spacing);
 
       // Wait until we're ready to show it.
       clock_nanosleep(CLOCK_REALTIME, TIMER_ABSTIME, &next_time, NULL);
