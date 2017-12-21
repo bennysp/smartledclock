@@ -35,7 +35,7 @@ sudo systemctl restart smartledclock.service
 - Adafruit RGB HAT - [Amazon Link](https://www.amazon.com/Adafruit-RGB-Matrix-HAT-Raspberry/dp/B00SK69C6E/ref=sr_1_5?s=electronics&ie=UTF8&qid=1513801675&sr=1-5&keywords=adafruit+hat)
 - 64x32 RGB LED Matrix - 3mm pitch  - [Adafruit Link](https://www.adafruit.com/product/2279)
 - 5v 10amp Power Supply - [Amazon Link](https://smile.amazon.com/gp/product/B01M0KLECZ/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1)
-\*Note: at the time of this writing, I am only using the standard power supply for the Pi.  This is enough to power the Pi and LED display  with the standard red text, but you will find not all colors work.  Getting the corrected amperage power supply allows proper colors, including white.
+\*Note at the time of this writing, I am only using the standard power supply for the Pi.  This is enough to power the Pi and LED display  with the standard red text, but probably won't work for white.
 
 ## Development Language
 
